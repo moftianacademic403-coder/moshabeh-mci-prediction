@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the accompanying article and this repository."
+title: "Moshabeh: reproducible analysis code for prediction of 6CIT-defined cognitive impairment"
+type: software
+authors:
+  - alias: "nazilamoftian"
+version: 1.0.0
+date-released: 2026-10-04
+repository-code: "https://github.com/nazilamoftian/moshabeh-mci-prediction"
+keywords:
+  - cognitive screening
+  - 6CIT
+  - machine learning
+  - external validation
+  - TabPFN
+  - calibration
+  - decision curve analysis
+  - SHAP

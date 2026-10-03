@@ -1,0 +1,30 @@
+# Participant-level data and credentials
+data/*.xlsx
+data/*.xls
+data/*.csv
+*.xlsx
+*.xls
+.env
+.env.*
+kaggle.json
+.kaggle/
+
+# Model and participant-level artifacts
+*.joblib
+*.pkl
+artifacts/
+outputs/
+kaggle_output*/
+
+# Python and notebook caches
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.pytest_cache/
+
+# Editors and operating systems
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
