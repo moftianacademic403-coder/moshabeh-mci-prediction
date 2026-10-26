@@ -126,9 +126,6 @@ def as_probability_array(frame, name: str) -> np.ndarray:
     return value.to_numpy(dtype=float) if hasattr(value, "to_numpy") else np.asarray(value, dtype=float)
 
 
-# ---------------------------------------------------------------------------
-# Figures 2 and S2. ROC, calibration, precision-recall, and DCA
-# ---------------------------------------------------------------------------
 def performance_panel(y, predictions, stem, folder, suptitle=None):
     fig, axes = plt.subplots(2, 2, figsize=(12, 10))
     ax_roc, ax_cal, ax_pr, ax_dca = axes.ravel()
@@ -188,9 +185,6 @@ def figure2_and_s2():
     )
 
 
-# ---------------------------------------------------------------------------
-# Figure 3. Participant-level agreement of predicted probabilities
-# ---------------------------------------------------------------------------
 def figure3_hexbin():
     models = [("DemographicLR", "Demographic baseline"),
               ("ElasticNet", "Elastic-net logistic regression")]
@@ -231,9 +225,6 @@ def figure3_hexbin():
     save_figure(fig, MAIN_OUT, "Figure3_Prediction_agreement_hexbin", dpi=600)
 
 
-# ---------------------------------------------------------------------------
-# Figure 4. Flexible calibration
-# ---------------------------------------------------------------------------
 def _logit(p):
     p = np.clip(np.asarray(p, dtype=float), 1e-6, 1 - 1e-6)
     return np.log(p / (1 - p))
@@ -292,9 +283,6 @@ def figure4_calibration():
     save_figure(fig, MAIN_OUT, "Figure4_Flexible_calibration", dpi=600)
 
 
-# ---------------------------------------------------------------------------
-# Figure 5. SHAP, subgroup discrimination, and education sensitivity
-# ---------------------------------------------------------------------------
 def fig_to_image(fig, dpi=300):
     from io import BytesIO
     buf = BytesIO()
@@ -414,9 +402,6 @@ def figure5_shap_subgroups():
     save_pil(canvas, MAIN_OUT, "Figure5_SHAP_subgroups_education", dpi=300)
 
 
-# ---------------------------------------------------------------------------
-# Figure 6. Cross-model importance and ranking agreement
-# ---------------------------------------------------------------------------
 def figure6_importance():
     models = ["ElasticNet", "SVM", "RF", "GBM", "XGBoost", "CatBoost", "LightGBM", "TabPFN"]
     all_models = ["DemographicLR", *models]
@@ -488,9 +473,6 @@ def figure6_importance():
     save_figure(fig, MAIN_OUT, "Figure6_Predictor_importance_and_rank_agreement", dpi=600)
 
 
-# ---------------------------------------------------------------------------
-# Supplementary Figures S1, S3 and S4
-# ---------------------------------------------------------------------------
 def copy_existing(stem_source, stem_target):
     for suffix in (".png", ".pdf"):
         source = stem_source.with_suffix(suffix)
