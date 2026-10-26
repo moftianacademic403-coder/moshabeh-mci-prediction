@@ -1,6 +1,6 @@
-# prediction of 6CIT-defined cognitive impairment
+# Transportability of machine learning models for cognitive impairment screening: model development and external validation across two population-based cohorts of older Iranian adults
 
-This repository contains the reproducible analysis code accompanying the Moshabeh study of machine-learning models for identifying **screen-positive cognitive impairment**, defined consistently in both cohorts as a Six-Item Cognitive Impairment Test (6CIT) score **≥8**.
+This repository contains the reproducible analysis code accompanying the study of machine-learning models for identifying **screen-positive cognitive impairment**, defined consistently in both cohorts as a Six-Item Cognitive Impairment Test (6CIT) score **≥8**.
 
 The analysis used PoCOsteo as the development cohort (n=2,000) and Phase III of the Bushehr Elderly Health (BEH) programme as the locked external-validation cohort (n=1,165). The repository contains code only; participant-level cohort data and fitted models are not distributed.
 
@@ -22,7 +22,7 @@ The analysis used PoCOsteo as the development cohort (n=2,000) and Phase III of 
 ```text
 .
 ├── notebooks/
-│   └── analysis.ipynb
+│   └── cognitive_screening_transportability.ipynb
 ├── src/
 │   └── generate_submission_figures.py
 ├── figures/
@@ -46,7 +46,7 @@ The individual-level PoCOsteo and BEH data are not included because they contain
 1. Create a private Kaggle Dataset containing the two authorised cohort files listed in `data/README.md`.
 2. Add that dataset as an input to the notebook.
 3. Create a Kaggle Secret named `TABPFN_TOKEN` containing an authorised Prior Labs API key, and enable the secret for the notebook. Do not place the token in source code.
-4. Use a CUDA-enabled Kaggle accelerator and run [`notebooks/moshabeh_analysis.ipynb`](notebooks/moshabeh_analysis.ipynb) from top to bottom.
+4. Use a CUDA-enabled Kaggle accelerator and run [`notebooks/cognitive_screening_transportability.ipynb`](notebooks/cognitive_screening_transportability.ipynb) from top to bottom.
 5. The notebook writes tables, figures, audit files, locked predictions, and a manuscript-figure ZIP under `/kaggle/working`.
 
 The analysis was run with a fixed base seed of 42. TabPFN retained its internal `random_state=0`.

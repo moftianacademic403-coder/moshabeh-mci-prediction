@@ -1,6 +1,6 @@
 cff-version: 1.2.0
 message: "If you use this software, please cite the accompanying article and this repository."
-title: "Moshabeh: reproducible analysis code for prediction of 6CIT-defined cognitive impairment"
+title: "Transportability of machine learning models for cognitive impairment screening: model development and external validation across two population-based cohorts of older Iranian adults"
 type: software
 authors:
   - alias: "moftianacademic403-coder"
@@ -12,6 +12,7 @@ keywords:
   - 6CIT
   - machine learning
   - external validation
+  - transportability
   - TabPFN
   - calibration
   - decision curve analysis
